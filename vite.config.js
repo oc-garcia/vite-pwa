@@ -18,10 +18,24 @@ export default defineConfig({
       manifest: {
         name: "vite-project",
         short_name: "vite-project",
-        description: "vite-project",
-        theme_color: "#008000",
+        description: "An example Vite project PWA",
+        theme_color: "#000000",
+        start_url: "/",
+        display: "standalone",
+        background_color: "#ffffff",
+        icons: [
+          {
+            src: "./src/assets/react.svg",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "./src/assets/react.svg",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
       },
-
       workbox: {
         globPatterns: ["**/*.{js,css,html,svg,png,ico}"],
         cleanupOutdatedCaches: true,
